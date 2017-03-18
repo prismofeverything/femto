@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package femto;
+
+message List {
+  repeated Expression items = 3;
+}
+
+message Condition {
+  Expression predicate = 1;
+  Expression truth = 2;
+  Expression falsehood = 3;
+}
+
+message Fn {
+  repeated string arguments = 1;
+  Expression body = 2;
+}
+
+message Binding {
+  string symbol = 1;
+  Expression expression = 2;
+}
+
+message Let {
+  repeated Binding bindings = 1;
+  Expression body = 2;
+}
+
+message Apply {
+  Expression function = 1;
+  repeated Expression arguments = 2;
+}
+
+message Expression {
+  oneof value {
+    bool nil = 1;
+    string symbol = 2;
+    string string = 3;
+    double number = 4;
+    List list = 5;
+    Condition condition = 7;
+    Fn fn = 6;
+    Let let = 8;
+    Apply apply = 9;
+  }
+}
