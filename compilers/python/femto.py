@@ -26,10 +26,10 @@ def l(*items):
     e.list.items.extend(items)
     return e
 
-def fn(arguments, body):
+def function(arguments, body):
     e = schema.Expression()
-    e.fn.arguments.extend(arguments)
-    e.fn.body.CopyFrom(body)
+    e.function.arguments.extend(arguments)
+    e.function.body.CopyFrom(body)
     return e
 
 def cond(predicate, truth, falsehood):
@@ -54,21 +54,21 @@ def let(bindings, body):
 
     return e
 
-def apply(function, arguments):
+def apply(operation, arguments):
     e = schema.Expression()
-    e.apply.function.CopyFrom(function)
+    e.apply.operation.CopyFrom(operation)
     e.apply.arguments.extend(arguments)
     return e
 
-### (fn [x]
+### (function [x]
 ###   (reduce
-###    (fn [a b] (+ a b))
+###    (function [a b] (+ a b))
 ###    0 (vals (get x "count"))))
 
-# addTree = fn(['a', 'b'],
+# addTree = function(['a', 'b'],
 #              apply(sym('+'), [sym('a'), sym('b')]))
 
-# foldTree = fn(['x'],
+# foldTree = function(['x'],
 #               apply(sym('reduce'),
 #                     [addTree,
 #                      n(0),
@@ -79,7 +79,7 @@ def apply(function, arguments):
 
 # print foldTree
 
-def nativeFold(x):
+def nativeSum(x):
     counts = x['count'].vals()
     return reduce(lambda a, b: a + b, 0, counts)
 
@@ -113,16 +113,16 @@ def compileFemto(token):
         product = compileFemto(token.value)
 
     elif isinstance(token, ast.Subscript):
-        function = s('get')
+        get = s('get')
         m = compileFemto(token.value)
         key = compileFemto(token.slice)
-        product = apply(function, [m, key])
+        product = apply(get, [m, key])
 
     elif isinstance(token, ast.Attribute):
-        function = s('get')
+        get = s('get')
         m = compileFemto(token.value)
         key = compileFemto(token.attr)
-        product = apply(function, [m, key])
+        product = apply(get, [m, key])
 
     elif isinstance(token, ast.Assign):
         target = compileFemto(token.targets[0])
@@ -131,20 +131,20 @@ def compileFemto(token):
         product = let(bindings, nil)
 
     elif isinstance(token, ast.Call):
-        function = compileFemto(token.func)
+        fn = compileFemto(token.func)
         arguments = map(compileFemto, token.args)
-        product = apply(function, arguments)
+        product = apply(fn, arguments)
 
     elif isinstance(token, ast.Lambda):
         arguments = map(lambda arg: compileFemto(arg).symbol, token.args.args)
         body = compileFemto(token.body)
-        product = fn(arguments, body)
+        product = function(arguments, body)
 
     elif isinstance(token, ast.BinOp):
-        function = compileFemto(token.op)
+        fn = compileFemto(token.op)
         right = compileFemto(token.right)
         left = compileFemto(token.left)
-        product = apply(function, [right, left])
+        product = apply(fn, [right, left])
 
     elif isinstance(token, ast.Return):
         product = compileFemto(token.value)
@@ -156,7 +156,7 @@ def compileFemto(token):
         bindings = tamp(map(lambda l: l.let.bindings, assigns))
         value = filter(lambda step: not step.HasField("let"), body)[-1]
         l = let(bindings, value)
-        product = fn(arguments, l)
+        product = function(arguments, l)
 
     elif isinstance(token, ast.Module):
         product = compileFemto(token.body[0])
@@ -166,12 +166,12 @@ def compileFemto(token):
 
     return product
 
-def femto(function):
-    tree = astForDef(function)
+def femto(target):
+    tree = astForDef(target)
     compileFemto(tree)
 
 def run():
-    print(compileFemto(astForDef(nativeFold)))
+    print(compileFemto(astForDef(nativeSum)))
 
 # defold = meta.decompile(nativeFold)
 # source = meta.dump_python_source(defold)

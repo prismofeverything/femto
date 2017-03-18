@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='femto.proto',
   package='femto',
   syntax='proto3',
-  serialized_pb=_b('\n\x0b\x66\x65mto.proto\x12\x05\x66\x65mto\"(\n\x04List\x12 \n\x05items\x18\x03 \x03(\x0b\x32\x11.femto.Expression\"y\n\tCondition\x12$\n\tpredicate\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12 \n\x05truth\x18\x02 \x01(\x0b\x32\x11.femto.Expression\x12$\n\tfalsehood\x18\x03 \x01(\x0b\x32\x11.femto.Expression\"8\n\x02\x46n\x12\x11\n\targuments\x18\x01 \x03(\t\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"@\n\x07\x42inding\x12\x0e\n\x06symbol\x18\x01 \x01(\t\x12%\n\nexpression\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"H\n\x03Let\x12 \n\x08\x62indings\x18\x01 \x03(\x0b\x32\x0e.femto.Binding\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"R\n\x05\x41pply\x12#\n\x08\x66unction\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12$\n\targuments\x18\x02 \x03(\x0b\x32\x11.femto.Expression\"\xf1\x01\n\nExpression\x12\r\n\x03nil\x18\x01 \x01(\x08H\x00\x12\x10\n\x06symbol\x18\x02 \x01(\tH\x00\x12\x10\n\x06string\x18\x03 \x01(\tH\x00\x12\x10\n\x06number\x18\x04 \x01(\x01H\x00\x12\x1b\n\x04list\x18\x05 \x01(\x0b\x32\x0b.femto.ListH\x00\x12%\n\tcondition\x18\x07 \x01(\x0b\x32\x10.femto.ConditionH\x00\x12\x17\n\x02\x66n\x18\x06 \x01(\x0b\x32\t.femto.FnH\x00\x12\x19\n\x03let\x18\x08 \x01(\x0b\x32\n.femto.LetH\x00\x12\x1d\n\x05\x61pply\x18\t \x01(\x0b\x32\x0c.femto.ApplyH\x00\x42\x07\n\x05valueb\x06proto3')
+  serialized_pb=_b('\n\x0b\x66\x65mto.proto\x12\x05\x66\x65mto\"(\n\x04List\x12 \n\x05items\x18\x03 \x03(\x0b\x32\x11.femto.Expression\"y\n\tCondition\x12$\n\tpredicate\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12 \n\x05truth\x18\x02 \x01(\x0b\x32\x11.femto.Expression\x12$\n\tfalsehood\x18\x03 \x01(\x0b\x32\x11.femto.Expression\">\n\x08\x46unction\x12\x11\n\targuments\x18\x01 \x03(\t\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"@\n\x07\x42inding\x12\x0e\n\x06symbol\x18\x01 \x01(\t\x12%\n\nexpression\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"H\n\x03Let\x12 \n\x08\x62indings\x18\x01 \x03(\x0b\x32\x0e.femto.Binding\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"S\n\x05\x41pply\x12$\n\toperation\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12$\n\targuments\x18\x02 \x03(\x0b\x32\x11.femto.Expression\"\xfd\x01\n\nExpression\x12\r\n\x03nil\x18\x01 \x01(\x08H\x00\x12\x10\n\x06symbol\x18\x02 \x01(\tH\x00\x12\x10\n\x06string\x18\x03 \x01(\tH\x00\x12\x10\n\x06number\x18\x04 \x01(\x01H\x00\x12\x1b\n\x04list\x18\x05 \x01(\x0b\x32\x0b.femto.ListH\x00\x12%\n\tcondition\x18\x07 \x01(\x0b\x32\x10.femto.ConditionH\x00\x12#\n\x08\x66unction\x18\x06 \x01(\x0b\x32\x0f.femto.FunctionH\x00\x12\x19\n\x03let\x18\x08 \x01(\x0b\x32\n.femto.LetH\x00\x12\x1d\n\x05\x61pply\x18\t \x01(\x0b\x32\x0c.femto.ApplyH\x00\x42\x07\n\x05valueb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -102,22 +102,22 @@ _CONDITION = _descriptor.Descriptor(
 )
 
 
-_FN = _descriptor.Descriptor(
-  name='Fn',
-  full_name='femto.Fn',
+_FUNCTION = _descriptor.Descriptor(
+  name='Function',
+  full_name='femto.Function',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='arguments', full_name='femto.Fn.arguments', index=0,
+      name='arguments', full_name='femto.Function.arguments', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='body', full_name='femto.Fn.body', index=1,
+      name='body', full_name='femto.Function.body', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -136,7 +136,7 @@ _FN = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=187,
-  serialized_end=243,
+  serialized_end=249,
 )
 
 
@@ -173,8 +173,8 @@ _BINDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=245,
-  serialized_end=309,
+  serialized_start=251,
+  serialized_end=315,
 )
 
 
@@ -211,8 +211,8 @@ _LET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=311,
-  serialized_end=383,
+  serialized_start=317,
+  serialized_end=389,
 )
 
 
@@ -224,7 +224,7 @@ _APPLY = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='function', full_name='femto.Apply.function', index=0,
+      name='operation', full_name='femto.Apply.operation', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -249,8 +249,8 @@ _APPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=385,
-  serialized_end=467,
+  serialized_start=391,
+  serialized_end=474,
 )
 
 
@@ -304,7 +304,7 @@ _EXPRESSION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='fn', full_name='femto.Expression.fn', index=6,
+      name='function', full_name='femto.Expression.function', index=6,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -339,23 +339,23 @@ _EXPRESSION = _descriptor.Descriptor(
       name='value', full_name='femto.Expression.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=470,
-  serialized_end=711,
+  serialized_start=477,
+  serialized_end=730,
 )
 
 _LIST.fields_by_name['items'].message_type = _EXPRESSION
 _CONDITION.fields_by_name['predicate'].message_type = _EXPRESSION
 _CONDITION.fields_by_name['truth'].message_type = _EXPRESSION
 _CONDITION.fields_by_name['falsehood'].message_type = _EXPRESSION
-_FN.fields_by_name['body'].message_type = _EXPRESSION
+_FUNCTION.fields_by_name['body'].message_type = _EXPRESSION
 _BINDING.fields_by_name['expression'].message_type = _EXPRESSION
 _LET.fields_by_name['bindings'].message_type = _BINDING
 _LET.fields_by_name['body'].message_type = _EXPRESSION
-_APPLY.fields_by_name['function'].message_type = _EXPRESSION
+_APPLY.fields_by_name['operation'].message_type = _EXPRESSION
 _APPLY.fields_by_name['arguments'].message_type = _EXPRESSION
 _EXPRESSION.fields_by_name['list'].message_type = _LIST
 _EXPRESSION.fields_by_name['condition'].message_type = _CONDITION
-_EXPRESSION.fields_by_name['fn'].message_type = _FN
+_EXPRESSION.fields_by_name['function'].message_type = _FUNCTION
 _EXPRESSION.fields_by_name['let'].message_type = _LET
 _EXPRESSION.fields_by_name['apply'].message_type = _APPLY
 _EXPRESSION.oneofs_by_name['value'].fields.append(
@@ -377,8 +377,8 @@ _EXPRESSION.oneofs_by_name['value'].fields.append(
   _EXPRESSION.fields_by_name['condition'])
 _EXPRESSION.fields_by_name['condition'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
 _EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['fn'])
-_EXPRESSION.fields_by_name['fn'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
+  _EXPRESSION.fields_by_name['function'])
+_EXPRESSION.fields_by_name['function'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
 _EXPRESSION.oneofs_by_name['value'].fields.append(
   _EXPRESSION.fields_by_name['let'])
 _EXPRESSION.fields_by_name['let'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
@@ -387,7 +387,7 @@ _EXPRESSION.oneofs_by_name['value'].fields.append(
 _EXPRESSION.fields_by_name['apply'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
 DESCRIPTOR.message_types_by_name['List'] = _LIST
 DESCRIPTOR.message_types_by_name['Condition'] = _CONDITION
-DESCRIPTOR.message_types_by_name['Fn'] = _FN
+DESCRIPTOR.message_types_by_name['Function'] = _FUNCTION
 DESCRIPTOR.message_types_by_name['Binding'] = _BINDING
 DESCRIPTOR.message_types_by_name['Let'] = _LET
 DESCRIPTOR.message_types_by_name['Apply'] = _APPLY
@@ -407,12 +407,12 @@ Condition = _reflection.GeneratedProtocolMessageType('Condition', (_message.Mess
   ))
 _sym_db.RegisterMessage(Condition)
 
-Fn = _reflection.GeneratedProtocolMessageType('Fn', (_message.Message,), dict(
-  DESCRIPTOR = _FN,
+Function = _reflection.GeneratedProtocolMessageType('Function', (_message.Message,), dict(
+  DESCRIPTOR = _FUNCTION,
   __module__ = 'femto_pb2'
-  # @@protoc_insertion_point(class_scope:femto.Fn)
+  # @@protoc_insertion_point(class_scope:femto.Function)
   ))
-_sym_db.RegisterMessage(Fn)
+_sym_db.RegisterMessage(Function)
 
 Binding = _reflection.GeneratedProtocolMessageType('Binding', (_message.Message,), dict(
   DESCRIPTOR = _BINDING,

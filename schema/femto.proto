@@ -12,7 +12,7 @@ message Condition {
   Expression falsehood = 3;
 }
 
-message Fn {
+message Function {
   repeated string arguments = 1;
   Expression body = 2;
 }
@@ -28,7 +28,7 @@ message Let {
 }
 
 message Apply {
-  Expression function = 1;
+  Expression operation = 1;
   repeated Expression arguments = 2;
 }
 
@@ -40,7 +40,7 @@ message Expression {
     double number = 4;
     List list = 5;
     Condition condition = 7;
-    Fn fn = 6;
+    Function function = 6;
     Let let = 8;
     Apply apply = 9;
   }
