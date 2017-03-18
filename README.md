@@ -12,6 +12,8 @@ We are not transmitting closures here. In fact, nothing about the lexical enviro
 
 So, **femto** specifies a schema (in protobuffer) that can be used to express any program. At least, the structure of it. I mean, I'm pretty sure. I haven't proven it but it seems like a reasonable assumption.
 
+## schema
+
 The schema aims to be as minimal as possible. As it is, an `Expression` message can be one of:
 
 * nil
@@ -112,6 +114,10 @@ is converted into the following protobuf encoded data:
     }
     
 Seems laborious, but... our code is data! Now we can transform or materialize it however we wish.
+
+It is my thought that with this most minimal of computational systems a form of universal code could be wrought, an expression of the deep interconnectedness of which each particular programming language is but a sprout from a great underground body, latent yet immortal.
+
+Is femto that thing? It is an attempt. Maybe if I cut some more stuff out it will be!
 
 ## future
 
