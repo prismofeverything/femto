@@ -1,7 +1,8 @@
+import re
 import ast
-import meta
 import inspect
 import femto_pb2 as schema
+from google.protobuf import json_format
 
 nil = schema.Expression()
 nil.nil = True
@@ -113,13 +114,13 @@ def compileFemto(token):
         product = compileFemto(token.value)
 
     elif isinstance(token, ast.Subscript):
-        get = s('get')
+        get = sym('get')
         m = compileFemto(token.value)
         key = compileFemto(token.slice)
         product = apply(get, [m, key])
 
     elif isinstance(token, ast.Attribute):
-        get = s('get')
+        get = sym('attribute')
         m = compileFemto(token.value)
         key = compileFemto(token.attr)
         product = apply(get, [m, key])
@@ -168,10 +169,21 @@ def compileFemto(token):
 
 def femto(target):
     tree = astForDef(target)
-    compileFemto(tree)
+    return compileFemto(tree)
+
+def renderProto(compiled):
+    json = json_format.MessageToJson(compiled)
+    return re.sub(r' +', ' ', json.replace('\n', ''))
+
+def renderFemto(target):
+    proto = femto(target)
+    return renderProto(proto)
 
 def run():
-    print(compileFemto(astForDef(nativeSum)))
+    output = femto(nativeSum)
+    json = renderProto(output)
+    print(json)
+    # print(compileFemto(astForDef(nativeSum)))
 
 # defold = meta.decompile(nativeFold)
 # source = meta.dump_python_source(defold)
