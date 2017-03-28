@@ -2,46 +2,148 @@ syntax = "proto3";
 
 package femto;
 
-message List {
-  repeated Expression items = 3;
+message Cond {
+  repeated Pair conditions = 1;
+  Expression else = 2;
 }
 
-message Condition {
-  Expression predicate = 1;
-  Expression truth = 2;
-  Expression falsehood = 3;
-}
-
-message Function {
-  repeated string arguments = 1;
+message Fn {
+  repeated string args = 1;
   Expression body = 2;
 }
 
-message Binding {
+message Bind {
   string symbol = 1;
   Expression expression = 2;
 }
 
 message Let {
-  repeated Binding bindings = 1;
+  repeated Bind bindings = 1;
   Expression body = 2;
 }
 
 message Apply {
-  Expression operation = 1;
-  repeated Expression arguments = 2;
+  Expression op = 1;
+  repeated Expression args = 2;
+}
+
+message Complex {
+  double r = 1;
+  double i = 2;
+}
+
+message Vector {
+  repeated Expression values = 1;
+}
+
+message Matrix {
+  repeated Vector rows = 1;
+}
+
+message Pair {
+  Expression key = 1;
+  Expression value = 2;
+}
+
+message Map {
+  repeated Pair entries = 1;
+}
+
+message Graph {
+  Map nodes = 1;
+  Map edges = 2;
+}
+
+message Base {
+  oneof value {
+    bool eq = 1;
+
+    // number
+    bool inc = 10;
+    bool dec = 11;
+    bool add = 12;
+    bool sub = 13;
+    bool mul = 14;
+    bool div = 15;
+    bool mod = 16;
+    bool quot = 17;
+    bool log = 18;
+    bool sqrt = 19;
+    bool sin = 20;
+    bool cos = 21;
+    bool tan = 22;
+    bool gt = 23;
+    bool gte = 24;
+    bool lt = 25;
+    bool lte = 26;
+    bool e = 278;
+    bool pi = 314;
+
+    // vector
+    bool head = 80;
+    bool tail = 81;
+    bool map = 82;
+    bool filter = 83;
+    bool reduce = 84;
+    bool nth = 85;
+    bool push = 86;
+    bool pop = 87;
+    bool concat = 88;
+    bool take = 89;
+    bool drop = 90;
+    bool dot = 91;
+
+    // matrix
+    bool transpose = 210;
+
+    // map
+    bool get = 330;
+    bool getIn = 331;
+    bool keys = 332;
+    bool vals = 333;
+    bool merge = 334;
+    bool mergeWith = 335;
+    bool assoc = 336;
+    bool assocIn = 337;
+    bool dissocIn = 338;
+    bool dissoc = 339;
+    bool update = 340;
+    bool updateIn = 341;
+
+    // graph
+    bool traverse = 500;
+    bool merge = 501;
+    bool path = 502;
+    bool breadth = 503;
+    bool depth = 504;
+
+    // fn
+    bool identity = 2000;
+    bool compose = 2001;
+    bool apply = 2002;
+    bool juxt = 2003;
+    bool constantly = 2004;
+    bool iterate = 2005;
+  }
 }
 
 message Expression {
   oneof value {
     bool nil = 1;
-    string symbol = 2;
-    string string = 3;
-    double number = 4;
-    List list = 5;
-    Condition condition = 7;
-    Function function = 6;
-    Let let = 8;
-    Apply apply = 9;
+    string sym = 2;
+    string s = 3;
+    int32 n = 4;
+    double r = 5;
+    Complex z = 6;
+    Vector vec = 7;
+    Matrix matrix = 8;
+    Pair pair = 9;
+    Map map = 10;
+    Graph graph = 11;
+    Cond cond = 12;
+    Fn fn = 13;
+    Let let = 14;
+    Apply apply = 15;
+    Base base = 16;
   }
 }
