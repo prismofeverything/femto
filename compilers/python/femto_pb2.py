@@ -19,11 +19,150 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='femto.proto',
   package='femto',
   syntax='proto3',
-  serialized_pb=_b('\n\x0b\x66\x65mto.proto\x12\x05\x66\x65mto\"H\n\x04\x43ond\x12\x1f\n\nconditions\x18\x01 \x03(\x0b\x32\x0b.femto.Pair\x12\x1f\n\x04\x65lse\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"3\n\x02\x46n\x12\x0c\n\x04\x61rgs\x18\x01 \x03(\t\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"=\n\x04\x42ind\x12\x0e\n\x06symbol\x18\x01 \x01(\t\x12%\n\nexpression\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"E\n\x03Let\x12\x1d\n\x08\x62indings\x18\x01 \x03(\x0b\x32\x0b.femto.Bind\x12\x1f\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"G\n\x05\x41pply\x12\x1d\n\x02op\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12\x1f\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x11.femto.Expression\"\x1f\n\x07\x43omplex\x12\t\n\x01r\x18\x01 \x01(\x01\x12\t\n\x01i\x18\x02 \x01(\x01\"+\n\x06Vector\x12!\n\x06values\x18\x01 \x03(\x0b\x32\x11.femto.Expression\"%\n\x06Matrix\x12\x1b\n\x04rows\x18\x01 \x03(\x0b\x32\r.femto.Vector\"H\n\x04Pair\x12\x1e\n\x03key\x18\x01 \x01(\x0b\x32\x11.femto.Expression\x12 \n\x05value\x18\x02 \x01(\x0b\x32\x11.femto.Expression\"#\n\x03Map\x12\x1c\n\x07\x65ntries\x18\x01 \x03(\x0b\x32\x0b.femto.Pair\"=\n\x05Graph\x12\x19\n\x05nodes\x18\x01 \x01(\x0b\x32\n.femto.Map\x12\x19\n\x05\x65\x64ges\x18\x02 \x01(\x0b\x32\n.femto.Map\"\xb6\x07\n\x04\x42\x61se\x12\x0c\n\x02\x65q\x18\x01 \x01(\x08H\x00\x12\r\n\x03inc\x18\n \x01(\x08H\x00\x12\r\n\x03\x64\x65\x63\x18\x0b \x01(\x08H\x00\x12\r\n\x03\x61\x64\x64\x18\x0c \x01(\x08H\x00\x12\r\n\x03sub\x18\r \x01(\x08H\x00\x12\r\n\x03mul\x18\x0e \x01(\x08H\x00\x12\r\n\x03\x64iv\x18\x0f \x01(\x08H\x00\x12\r\n\x03mod\x18\x10 \x01(\x08H\x00\x12\x0e\n\x04quot\x18\x11 \x01(\x08H\x00\x12\r\n\x03log\x18\x12 \x01(\x08H\x00\x12\x0e\n\x04sqrt\x18\x13 \x01(\x08H\x00\x12\r\n\x03sin\x18\x14 \x01(\x08H\x00\x12\r\n\x03\x63os\x18\x15 \x01(\x08H\x00\x12\r\n\x03tan\x18\x16 \x01(\x08H\x00\x12\x0c\n\x02gt\x18\x17 \x01(\x08H\x00\x12\r\n\x03gte\x18\x18 \x01(\x08H\x00\x12\x0c\n\x02lt\x18\x19 \x01(\x08H\x00\x12\r\n\x03lte\x18\x1a \x01(\x08H\x00\x12\x0c\n\x01\x65\x18\x96\x02 \x01(\x08H\x00\x12\r\n\x02pi\x18\xba\x02 \x01(\x08H\x00\x12\x0e\n\x04head\x18P \x01(\x08H\x00\x12\x0e\n\x04tail\x18Q \x01(\x08H\x00\x12\r\n\x03map\x18R \x01(\x08H\x00\x12\x10\n\x06\x66ilter\x18S \x01(\x08H\x00\x12\x10\n\x06reduce\x18T \x01(\x08H\x00\x12\r\n\x03nth\x18U \x01(\x08H\x00\x12\x0e\n\x04push\x18V \x01(\x08H\x00\x12\r\n\x03pop\x18W \x01(\x08H\x00\x12\x10\n\x06\x63oncat\x18X \x01(\x08H\x00\x12\x0e\n\x04take\x18Y \x01(\x08H\x00\x12\x0e\n\x04\x64rop\x18Z \x01(\x08H\x00\x12\r\n\x03\x64ot\x18[ \x01(\x08H\x00\x12\x14\n\ttranspose\x18\xd2\x01 \x01(\x08H\x00\x12\x0e\n\x03get\x18\xca\x02 \x01(\x08H\x00\x12\x10\n\x05getIn\x18\xcb\x02 \x01(\x08H\x00\x12\x0f\n\x04keys\x18\xcc\x02 \x01(\x08H\x00\x12\x0f\n\x04vals\x18\xcd\x02 \x01(\x08H\x00\x12\x10\n\x05merge\x18\xce\x02 \x01(\x08H\x00\x12\x14\n\tmergeWith\x18\xcf\x02 \x01(\x08H\x00\x12\x10\n\x05\x61ssoc\x18\xd0\x02 \x01(\x08H\x00\x12\x12\n\x07\x61ssocIn\x18\xd1\x02 \x01(\x08H\x00\x12\x13\n\x08\x64issocIn\x18\xd2\x02 \x01(\x08H\x00\x12\x11\n\x06\x64issoc\x18\xd3\x02 \x01(\x08H\x00\x12\x11\n\x06update\x18\xd4\x02 \x01(\x08H\x00\x12\x13\n\x08updateIn\x18\xd5\x02 \x01(\x08H\x00\x12\x13\n\x08traverse\x18\xf4\x03 \x01(\x08H\x00\x12\x0f\n\x04path\x18\xf6\x03 \x01(\x08H\x00\x12\x12\n\x07\x62readth\x18\xf7\x03 \x01(\x08H\x00\x12\x10\n\x05\x64\x65pth\x18\xf8\x03 \x01(\x08H\x00\x12\x13\n\x08identity\x18\xd0\x0f \x01(\x08H\x00\x12\x12\n\x07\x63ompose\x18\xd1\x0f \x01(\x08H\x00\x12\x10\n\x05\x61pply\x18\xd2\x0f \x01(\x08H\x00\x12\x0f\n\x04juxt\x18\xd3\x0f \x01(\x08H\x00\x12\x15\n\nconstantly\x18\xd4\x0f \x01(\x08H\x00\x12\x12\n\x07iterate\x18\xd5\x0f \x01(\x08H\x00\x42\x07\n\x05value\"\x9a\x03\n\nExpression\x12\r\n\x03nil\x18\x01 \x01(\x08H\x00\x12\r\n\x03sym\x18\x02 \x01(\tH\x00\x12\x0b\n\x01s\x18\x03 \x01(\tH\x00\x12\x0b\n\x01n\x18\x04 \x01(\x05H\x00\x12\x0b\n\x01r\x18\x05 \x01(\x01H\x00\x12\x1b\n\x01z\x18\x06 \x01(\x0b\x32\x0e.femto.ComplexH\x00\x12\x1c\n\x03vec\x18\x07 \x01(\x0b\x32\r.femto.VectorH\x00\x12\x1f\n\x06matrix\x18\x08 \x01(\x0b\x32\r.femto.MatrixH\x00\x12\x1b\n\x04pair\x18\t \x01(\x0b\x32\x0b.femto.PairH\x00\x12\x19\n\x03map\x18\n \x01(\x0b\x32\n.femto.MapH\x00\x12\x1d\n\x05graph\x18\x0b \x01(\x0b\x32\x0c.femto.GraphH\x00\x12\x1b\n\x04\x63ond\x18\x0c \x01(\x0b\x32\x0b.femto.CondH\x00\x12\x17\n\x02\x66n\x18\r \x01(\x0b\x32\t.femto.FnH\x00\x12\x19\n\x03let\x18\x0e \x01(\x0b\x32\n.femto.LetH\x00\x12\x1d\n\x05\x61pply\x18\x0f \x01(\x0b\x32\x0c.femto.ApplyH\x00\x12\x1b\n\x04\x62\x61se\x18\x10 \x01(\x0b\x32\x0b.femto.BaseH\x00\x42\x07\n\x05valueb\x06proto3')
+  serialized_pb=_b('\n\x0b\x66\x65mto.proto\x12\x05\x66\x65mto\"\x95\x03\n\x05\x46\x65mto\x12\r\n\x03nil\x18\x01 \x01(\x08H\x00\x12\r\n\x03sym\x18\x02 \x01(\tH\x00\x12\x0b\n\x01s\x18\x03 \x01(\tH\x00\x12\x0b\n\x01n\x18\x04 \x01(\x05H\x00\x12\x0b\n\x01r\x18\x05 \x01(\x01H\x00\x12\x1b\n\x01z\x18\x06 \x01(\x0b\x32\x0e.femto.ComplexH\x00\x12\x1c\n\x03vec\x18\x07 \x01(\x0b\x32\r.femto.VectorH\x00\x12\x1f\n\x06matrix\x18\x08 \x01(\x0b\x32\r.femto.MatrixH\x00\x12\x1b\n\x04pair\x18\t \x01(\x0b\x32\x0b.femto.PairH\x00\x12\x19\n\x03map\x18\n \x01(\x0b\x32\n.femto.MapH\x00\x12\x1d\n\x05graph\x18\x0b \x01(\x0b\x32\x0c.femto.GraphH\x00\x12\x1b\n\x04\x63ond\x18\x0c \x01(\x0b\x32\x0b.femto.CondH\x00\x12\x17\n\x02\x66n\x18\r \x01(\x0b\x32\t.femto.FnH\x00\x12\x19\n\x03let\x18\x0e \x01(\x0b\x32\n.femto.LetH\x00\x12\x1d\n\x05\x61pply\x18\x0f \x01(\x0b\x32\x0c.femto.ApplyH\x00\x12\x1b\n\x04\x62\x61se\x18\x10 \x01(\x0b\x32\x0b.femto.BaseH\x00\x42\x07\n\x05value\"C\n\x04\x43ond\x12\x1f\n\nconditions\x18\x01 \x03(\x0b\x32\x0b.femto.Pair\x12\x1a\n\x04\x65lse\x18\x02 \x01(\x0b\x32\x0c.femto.Femto\".\n\x02\x46n\x12\x0c\n\x04\x61rgs\x18\x01 \x03(\t\x12\x1a\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x0c.femto.Femto\"3\n\x04\x42ind\x12\x0e\n\x06symbol\x18\x01 \x01(\t\x12\x1b\n\x05value\x18\x02 \x01(\x0b\x32\x0c.femto.Femto\"@\n\x03Let\x12\x1d\n\x08\x62indings\x18\x01 \x03(\x0b\x32\x0b.femto.Bind\x12\x1a\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x0c.femto.Femto\"=\n\x05\x41pply\x12\x18\n\x02op\x18\x01 \x01(\x0b\x32\x0c.femto.Femto\x12\x1a\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x0c.femto.Femto\"\x1f\n\x07\x43omplex\x12\t\n\x01r\x18\x01 \x01(\x01\x12\t\n\x01i\x18\x02 \x01(\x01\"&\n\x06Vector\x12\x1c\n\x06values\x18\x01 \x03(\x0b\x32\x0c.femto.Femto\"%\n\x06Matrix\x12\x1b\n\x04rows\x18\x01 \x03(\x0b\x32\r.femto.Vector\">\n\x04Pair\x12\x19\n\x03key\x18\x01 \x01(\x0b\x32\x0c.femto.Femto\x12\x1b\n\x05value\x18\x02 \x01(\x0b\x32\x0c.femto.Femto\"#\n\x03Map\x12\x1c\n\x07\x65ntries\x18\x01 \x03(\x0b\x32\x0b.femto.Pair\"=\n\x05Graph\x12\x19\n\x05nodes\x18\x01 \x01(\x0b\x32\n.femto.Map\x12\x19\n\x05\x65\x64ges\x18\x02 \x01(\x0b\x32\n.femto.Map\"\xb6\x07\n\x04\x42\x61se\x12\x0c\n\x02\x65q\x18\x01 \x01(\x08H\x00\x12\r\n\x03inc\x18\n \x01(\x08H\x00\x12\r\n\x03\x64\x65\x63\x18\x0b \x01(\x08H\x00\x12\r\n\x03\x61\x64\x64\x18\x0c \x01(\x08H\x00\x12\r\n\x03sub\x18\r \x01(\x08H\x00\x12\r\n\x03mul\x18\x0e \x01(\x08H\x00\x12\r\n\x03\x64iv\x18\x0f \x01(\x08H\x00\x12\r\n\x03mod\x18\x10 \x01(\x08H\x00\x12\x0e\n\x04quot\x18\x11 \x01(\x08H\x00\x12\r\n\x03log\x18\x12 \x01(\x08H\x00\x12\x0e\n\x04sqrt\x18\x13 \x01(\x08H\x00\x12\r\n\x03sin\x18\x14 \x01(\x08H\x00\x12\r\n\x03\x63os\x18\x15 \x01(\x08H\x00\x12\r\n\x03tan\x18\x16 \x01(\x08H\x00\x12\x0c\n\x02gt\x18\x17 \x01(\x08H\x00\x12\r\n\x03gte\x18\x18 \x01(\x08H\x00\x12\x0c\n\x02lt\x18\x19 \x01(\x08H\x00\x12\r\n\x03lte\x18\x1a \x01(\x08H\x00\x12\x0c\n\x01\x65\x18\x96\x02 \x01(\x08H\x00\x12\r\n\x02pi\x18\xba\x02 \x01(\x08H\x00\x12\x0e\n\x04head\x18P \x01(\x08H\x00\x12\x0e\n\x04tail\x18Q \x01(\x08H\x00\x12\r\n\x03map\x18R \x01(\x08H\x00\x12\x10\n\x06\x66ilter\x18S \x01(\x08H\x00\x12\x10\n\x06reduce\x18T \x01(\x08H\x00\x12\r\n\x03nth\x18U \x01(\x08H\x00\x12\x0e\n\x04push\x18V \x01(\x08H\x00\x12\r\n\x03pop\x18W \x01(\x08H\x00\x12\x10\n\x06\x63oncat\x18X \x01(\x08H\x00\x12\x0e\n\x04take\x18Y \x01(\x08H\x00\x12\x0e\n\x04\x64rop\x18Z \x01(\x08H\x00\x12\r\n\x03\x64ot\x18[ \x01(\x08H\x00\x12\x14\n\ttranspose\x18\xd2\x01 \x01(\x08H\x00\x12\x0e\n\x03get\x18\xca\x02 \x01(\x08H\x00\x12\x10\n\x05getIn\x18\xcb\x02 \x01(\x08H\x00\x12\x0f\n\x04keys\x18\xcc\x02 \x01(\x08H\x00\x12\x0f\n\x04vals\x18\xcd\x02 \x01(\x08H\x00\x12\x10\n\x05merge\x18\xce\x02 \x01(\x08H\x00\x12\x14\n\tmergeWith\x18\xcf\x02 \x01(\x08H\x00\x12\x10\n\x05\x61ssoc\x18\xd0\x02 \x01(\x08H\x00\x12\x12\n\x07\x61ssocIn\x18\xd1\x02 \x01(\x08H\x00\x12\x13\n\x08\x64issocIn\x18\xd2\x02 \x01(\x08H\x00\x12\x11\n\x06\x64issoc\x18\xd3\x02 \x01(\x08H\x00\x12\x11\n\x06update\x18\xd4\x02 \x01(\x08H\x00\x12\x13\n\x08updateIn\x18\xd5\x02 \x01(\x08H\x00\x12\x13\n\x08traverse\x18\xf4\x03 \x01(\x08H\x00\x12\x0f\n\x04path\x18\xf6\x03 \x01(\x08H\x00\x12\x12\n\x07\x62readth\x18\xf7\x03 \x01(\x08H\x00\x12\x10\n\x05\x64\x65pth\x18\xf8\x03 \x01(\x08H\x00\x12\x13\n\x08identity\x18\xd0\x0f \x01(\x08H\x00\x12\x12\n\x07\x63ompose\x18\xd1\x0f \x01(\x08H\x00\x12\x10\n\x05\x61pply\x18\xd2\x0f \x01(\x08H\x00\x12\x0f\n\x04juxt\x18\xd3\x0f \x01(\x08H\x00\x12\x15\n\nconstantly\x18\xd4\x0f \x01(\x08H\x00\x12\x12\n\x07iterate\x18\xd5\x0f \x01(\x08H\x00\x42\x07\n\x05valueb\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
+
+
+_FEMTO = _descriptor.Descriptor(
+  name='Femto',
+  full_name='femto.Femto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='nil', full_name='femto.Femto.nil', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sym', full_name='femto.Femto.sym', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='s', full_name='femto.Femto.s', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='n', full_name='femto.Femto.n', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='r', full_name='femto.Femto.r', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='femto.Femto.z', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='vec', full_name='femto.Femto.vec', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='matrix', full_name='femto.Femto.matrix', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pair', full_name='femto.Femto.pair', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='map', full_name='femto.Femto.map', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='graph', full_name='femto.Femto.graph', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cond', full_name='femto.Femto.cond', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fn', full_name='femto.Femto.fn', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='let', full_name='femto.Femto.let', index=13,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apply', full_name='femto.Femto.apply', index=14,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='base', full_name='femto.Femto.base', index=15,
+      number=16, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='value', full_name='femto.Femto.value',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=23,
+  serialized_end=428,
+)
 
 
 _COND = _descriptor.Descriptor(
@@ -59,8 +198,8 @@ _COND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22,
-  serialized_end=94,
+  serialized_start=430,
+  serialized_end=497,
 )
 
 
@@ -97,8 +236,8 @@ _FN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=96,
-  serialized_end=147,
+  serialized_start=499,
+  serialized_end=545,
 )
 
 
@@ -117,7 +256,7 @@ _BIND = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='expression', full_name='femto.Bind.expression', index=1,
+      name='value', full_name='femto.Bind.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -135,8 +274,8 @@ _BIND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=149,
-  serialized_end=210,
+  serialized_start=547,
+  serialized_end=598,
 )
 
 
@@ -173,8 +312,8 @@ _LET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=212,
-  serialized_end=281,
+  serialized_start=600,
+  serialized_end=664,
 )
 
 
@@ -211,8 +350,8 @@ _APPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=354,
+  serialized_start=666,
+  serialized_end=727,
 )
 
 
@@ -249,8 +388,8 @@ _COMPLEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=356,
-  serialized_end=387,
+  serialized_start=729,
+  serialized_end=760,
 )
 
 
@@ -280,8 +419,8 @@ _VECTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=432,
+  serialized_start=762,
+  serialized_end=800,
 )
 
 
@@ -311,8 +450,8 @@ _MATRIX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=434,
-  serialized_end=471,
+  serialized_start=802,
+  serialized_end=839,
 )
 
 
@@ -349,8 +488,8 @@ _PAIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=473,
-  serialized_end=545,
+  serialized_start=841,
+  serialized_end=903,
 )
 
 
@@ -380,8 +519,8 @@ _MAP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=547,
-  serialized_end=582,
+  serialized_start=905,
+  serialized_end=940,
 )
 
 
@@ -418,8 +557,8 @@ _GRAPH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=584,
-  serialized_end=645,
+  serialized_start=942,
+  serialized_end=1003,
 )
 
 
@@ -830,161 +969,81 @@ _BASE = _descriptor.Descriptor(
       name='value', full_name='femto.Base.value',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=648,
-  serialized_end=1598,
+  serialized_start=1006,
+  serialized_end=1956,
 )
 
-
-_EXPRESSION = _descriptor.Descriptor(
-  name='Expression',
-  full_name='femto.Expression',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='nil', full_name='femto.Expression.nil', index=0,
-      number=1, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sym', full_name='femto.Expression.sym', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='s', full_name='femto.Expression.s', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='n', full_name='femto.Expression.n', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='r', full_name='femto.Expression.r', index=4,
-      number=5, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='femto.Expression.z', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='vec', full_name='femto.Expression.vec', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='matrix', full_name='femto.Expression.matrix', index=7,
-      number=8, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='pair', full_name='femto.Expression.pair', index=8,
-      number=9, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='map', full_name='femto.Expression.map', index=9,
-      number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='graph', full_name='femto.Expression.graph', index=10,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cond', full_name='femto.Expression.cond', index=11,
-      number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='fn', full_name='femto.Expression.fn', index=12,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='let', full_name='femto.Expression.let', index=13,
-      number=14, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='apply', full_name='femto.Expression.apply', index=14,
-      number=15, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='base', full_name='femto.Expression.base', index=15,
-      number=16, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='value', full_name='femto.Expression.value',
-      index=0, containing_type=None, fields=[]),
-  ],
-  serialized_start=1601,
-  serialized_end=2011,
-)
-
+_FEMTO.fields_by_name['z'].message_type = _COMPLEX
+_FEMTO.fields_by_name['vec'].message_type = _VECTOR
+_FEMTO.fields_by_name['matrix'].message_type = _MATRIX
+_FEMTO.fields_by_name['pair'].message_type = _PAIR
+_FEMTO.fields_by_name['map'].message_type = _MAP
+_FEMTO.fields_by_name['graph'].message_type = _GRAPH
+_FEMTO.fields_by_name['cond'].message_type = _COND
+_FEMTO.fields_by_name['fn'].message_type = _FN
+_FEMTO.fields_by_name['let'].message_type = _LET
+_FEMTO.fields_by_name['apply'].message_type = _APPLY
+_FEMTO.fields_by_name['base'].message_type = _BASE
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['nil'])
+_FEMTO.fields_by_name['nil'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['sym'])
+_FEMTO.fields_by_name['sym'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['s'])
+_FEMTO.fields_by_name['s'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['n'])
+_FEMTO.fields_by_name['n'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['r'])
+_FEMTO.fields_by_name['r'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['z'])
+_FEMTO.fields_by_name['z'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['vec'])
+_FEMTO.fields_by_name['vec'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['matrix'])
+_FEMTO.fields_by_name['matrix'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['pair'])
+_FEMTO.fields_by_name['pair'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['map'])
+_FEMTO.fields_by_name['map'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['graph'])
+_FEMTO.fields_by_name['graph'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['cond'])
+_FEMTO.fields_by_name['cond'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['fn'])
+_FEMTO.fields_by_name['fn'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['let'])
+_FEMTO.fields_by_name['let'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['apply'])
+_FEMTO.fields_by_name['apply'].containing_oneof = _FEMTO.oneofs_by_name['value']
+_FEMTO.oneofs_by_name['value'].fields.append(
+  _FEMTO.fields_by_name['base'])
+_FEMTO.fields_by_name['base'].containing_oneof = _FEMTO.oneofs_by_name['value']
 _COND.fields_by_name['conditions'].message_type = _PAIR
-_COND.fields_by_name['else'].message_type = _EXPRESSION
-_FN.fields_by_name['body'].message_type = _EXPRESSION
-_BIND.fields_by_name['expression'].message_type = _EXPRESSION
+_COND.fields_by_name['else'].message_type = _FEMTO
+_FN.fields_by_name['body'].message_type = _FEMTO
+_BIND.fields_by_name['value'].message_type = _FEMTO
 _LET.fields_by_name['bindings'].message_type = _BIND
-_LET.fields_by_name['body'].message_type = _EXPRESSION
-_APPLY.fields_by_name['op'].message_type = _EXPRESSION
-_APPLY.fields_by_name['args'].message_type = _EXPRESSION
-_VECTOR.fields_by_name['values'].message_type = _EXPRESSION
+_LET.fields_by_name['body'].message_type = _FEMTO
+_APPLY.fields_by_name['op'].message_type = _FEMTO
+_APPLY.fields_by_name['args'].message_type = _FEMTO
+_VECTOR.fields_by_name['values'].message_type = _FEMTO
 _MATRIX.fields_by_name['rows'].message_type = _VECTOR
-_PAIR.fields_by_name['key'].message_type = _EXPRESSION
-_PAIR.fields_by_name['value'].message_type = _EXPRESSION
+_PAIR.fields_by_name['key'].message_type = _FEMTO
+_PAIR.fields_by_name['value'].message_type = _FEMTO
 _MAP.fields_by_name['entries'].message_type = _PAIR
 _GRAPH.fields_by_name['nodes'].message_type = _MAP
 _GRAPH.fields_by_name['edges'].message_type = _MAP
@@ -1153,65 +1212,7 @@ _BASE.fields_by_name['constantly'].containing_oneof = _BASE.oneofs_by_name['valu
 _BASE.oneofs_by_name['value'].fields.append(
   _BASE.fields_by_name['iterate'])
 _BASE.fields_by_name['iterate'].containing_oneof = _BASE.oneofs_by_name['value']
-_EXPRESSION.fields_by_name['z'].message_type = _COMPLEX
-_EXPRESSION.fields_by_name['vec'].message_type = _VECTOR
-_EXPRESSION.fields_by_name['matrix'].message_type = _MATRIX
-_EXPRESSION.fields_by_name['pair'].message_type = _PAIR
-_EXPRESSION.fields_by_name['map'].message_type = _MAP
-_EXPRESSION.fields_by_name['graph'].message_type = _GRAPH
-_EXPRESSION.fields_by_name['cond'].message_type = _COND
-_EXPRESSION.fields_by_name['fn'].message_type = _FN
-_EXPRESSION.fields_by_name['let'].message_type = _LET
-_EXPRESSION.fields_by_name['apply'].message_type = _APPLY
-_EXPRESSION.fields_by_name['base'].message_type = _BASE
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['nil'])
-_EXPRESSION.fields_by_name['nil'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['sym'])
-_EXPRESSION.fields_by_name['sym'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['s'])
-_EXPRESSION.fields_by_name['s'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['n'])
-_EXPRESSION.fields_by_name['n'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['r'])
-_EXPRESSION.fields_by_name['r'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['z'])
-_EXPRESSION.fields_by_name['z'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['vec'])
-_EXPRESSION.fields_by_name['vec'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['matrix'])
-_EXPRESSION.fields_by_name['matrix'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['pair'])
-_EXPRESSION.fields_by_name['pair'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['map'])
-_EXPRESSION.fields_by_name['map'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['graph'])
-_EXPRESSION.fields_by_name['graph'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['cond'])
-_EXPRESSION.fields_by_name['cond'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['fn'])
-_EXPRESSION.fields_by_name['fn'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['let'])
-_EXPRESSION.fields_by_name['let'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['apply'])
-_EXPRESSION.fields_by_name['apply'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
-_EXPRESSION.oneofs_by_name['value'].fields.append(
-  _EXPRESSION.fields_by_name['base'])
-_EXPRESSION.fields_by_name['base'].containing_oneof = _EXPRESSION.oneofs_by_name['value']
+DESCRIPTOR.message_types_by_name['Femto'] = _FEMTO
 DESCRIPTOR.message_types_by_name['Cond'] = _COND
 DESCRIPTOR.message_types_by_name['Fn'] = _FN
 DESCRIPTOR.message_types_by_name['Bind'] = _BIND
@@ -1224,7 +1225,13 @@ DESCRIPTOR.message_types_by_name['Pair'] = _PAIR
 DESCRIPTOR.message_types_by_name['Map'] = _MAP
 DESCRIPTOR.message_types_by_name['Graph'] = _GRAPH
 DESCRIPTOR.message_types_by_name['Base'] = _BASE
-DESCRIPTOR.message_types_by_name['Expression'] = _EXPRESSION
+
+Femto = _reflection.GeneratedProtocolMessageType('Femto', (_message.Message,), dict(
+  DESCRIPTOR = _FEMTO,
+  __module__ = 'femto_pb2'
+  # @@protoc_insertion_point(class_scope:femto.Femto)
+  ))
+_sym_db.RegisterMessage(Femto)
 
 Cond = _reflection.GeneratedProtocolMessageType('Cond', (_message.Message,), dict(
   DESCRIPTOR = _COND,
@@ -1309,13 +1316,6 @@ Base = _reflection.GeneratedProtocolMessageType('Base', (_message.Message,), dic
   # @@protoc_insertion_point(class_scope:femto.Base)
   ))
 _sym_db.RegisterMessage(Base)
-
-Expression = _reflection.GeneratedProtocolMessageType('Expression', (_message.Message,), dict(
-  DESCRIPTOR = _EXPRESSION,
-  __module__ = 'femto_pb2'
-  # @@protoc_insertion_point(class_scope:femto.Expression)
-  ))
-_sym_db.RegisterMessage(Expression)
 
 
 # @@protoc_insertion_point(module_scope)
