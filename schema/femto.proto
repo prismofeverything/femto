@@ -112,7 +112,6 @@ message Base {
 
     // graph
     bool traverse = 500;
-    bool merge = 501;
     bool path = 502;
     bool breadth = 503;
     bool depth = 504;
